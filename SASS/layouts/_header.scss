@@ -1,0 +1,23 @@
+header{
+     margin-top: 20px;
+     @include desktop-only{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+     }
+    
+
+}
+.header{
+    &__logo{
+        display: block;
+        width: 50%;
+        margin: auto;
+        margin-bottom: 20px; 
+        @include desktop-only{
+            width: 25%;
+            margin: 0;
+        } 
+    }
+    
+}

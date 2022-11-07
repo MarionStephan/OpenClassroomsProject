@@ -1,0 +1,16 @@
+.explore{
+    &__button{
+        background: $gradient;
+        color: white;
+        border: 0;
+        padding: 15px;
+        border-radius: 25px;
+        font-size: 16px;
+        box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
+        margin-bottom: 30px;
+    }
+    &__button:hover{
+        @include brightness;
+        @include shadow;
+    }
+}

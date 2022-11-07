@@ -1,21 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  
-  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <script src="https://kit.fontawesome.com/bcd93d7535.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
+  <title>OhMyFood</title>
 </head>
+
 <body>
+  <div class="loader">
+    <div class="container">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square last"></div>
+      <div class="square clear"></div>
+      <div class="square"></div>
+      <div class="square last"></div>
+      <div class="square clear"></div>
+      <div class="square "></div>
+      <div class="square last"></div>
+    </div>
+  </div>
   <header>
+    <img src="images/logo/ohmyfood@2x.svg" alt="OhMyFood" class="header__logo">
+    </div>
   </header>
   <main>
-    <h1>Projet 3</h1>
+    <div class="localisation">
+      <form action="" class="localisation__form">
+        <button class="localisation__button"><i class=" fa-solid fa-location-dot"></i></button>
+        <input type="text" name="localisation" class="localisation__texte" value="Paris, Belleville">
+      </form>
+    </div>
+    <section class="explore">
+      <h1 class="explore__titre">Réservez le menu qui vous convient</h1>
+      <p class="explore__para">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+      <a href="#" class="explore__lien"><button class="explore__button">Explorez nos restaurants</button></a>
+    </section>
+    <section class="tuto">
+      <h2 class="tuto__titre">Fonctionnement</h2>
+      <ol class="tuto__liste">
+        <li class="tuto__etapes"><i class="fa-solid fa-mobile-screen-button tuto__icone"></i>Choisissez un restaurant
+        </li>
+        <li class="tuto__etapes"><i class="fa-solid fa-list-ul tuto__icone"></i>Composez votre menu</li>
+        <li class="tuto__etapes"><i class="fa-solid fa-store tuto__icone"></i>Dégustez au restaurant</li>
+        </ul>
+    </section>
   </main>
   <footer>
   </footer>
   <script src="scripts.js"></script>
 </body>
+
 </html>

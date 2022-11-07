@@ -1,0 +1,22 @@
+@mixin desktop-only {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @content
+    }
+}
+
+@mixin brightness {
+    cursor: pointer;
+    filter: brightness(110%);
+}
+@mixin shadow {
+    box-shadow: rgb(94, 95, 96) 0px 8px 24px;
+}
+@mixin violethover ($colour:$colour-primary){
+    background-color:lighten($colour, 35%) ;
+}

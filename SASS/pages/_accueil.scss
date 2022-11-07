@@ -1,0 +1,112 @@
+.localisation{
+    margin:0;
+    padding: 15px;
+    background-color: #f3f3f3;
+    box-shadow: inset 0px 4px 10px -8px;
+    @include desktop-only{
+            border-radius: 50px;
+            padding: 20px;
+            height: fit-content;
+            width: 50%;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+    &__button{
+        border: none;
+        background-color: transparent;
+        font-size: 16px;
+    }
+    &__form{
+        display: flex;
+        justify-content: center;
+    }
+    &__texte{
+        border: none;
+        text-align: center;
+        background-color: transparent;
+        padding-right: 0;
+        font-size: 16px;
+        width: 150px;
+    }
+}
+
+.explore{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fafafa;
+    padding:35px;
+    &__titre{
+        text-align: center;
+        margin-bottom:10px;
+        margin-top: 0;
+        font-weight: bold;
+    }
+    &__para{
+        text-align: center;
+        size: 10px;
+        font-weight: lighter;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+}
+
+.tuto{
+    padding: 2rem 1rem;
+    &__titre{
+        @include tablet-only{
+            text-align: center;
+        }
+    }
+    &__liste{
+        list-style-type:none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: compteListe;
+        @include tablet-only{
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+    &__etapes{
+        padding: 1.5rem;
+        margin: 1rem 0 1rem .75rem;
+          margin-top: 1rem;
+        box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
+        border-radius: 1.25rem;
+        background-color: #f6f6f6;
+        display: flex;
+        position: relative;
+     &::before{
+        counter-increment: compteListe 1;
+        content: counter(compteListe) " ";
+        background: $colour-primary;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+        left: -.75rem;
+      }
+      &:hover{
+        @include violethover;
+        .tuto__icone{
+            color:$colour-primary;
+        }
+      }
+      @include desktop-only{
+        width: 25%;
+      }
+    }
+    &__lien{
+        text-decoration: none;
+    }
+    &__icone{
+        margin-right: 1rem;
+        color: #7e7e7e;
+      }
+    }
