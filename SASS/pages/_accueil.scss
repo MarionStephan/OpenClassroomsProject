@@ -178,5 +178,14 @@
     }
     &__coeur{
         font-size: 25px;
+        &:hover{
+            animation: coeur 400ms both;
+        }
+        .fa-heart:hover:before{
+        font-family: "Font Awesome 6 Free";
+        content: "\f004";
+        font-weight: 900;
+        }
     }
 }
+

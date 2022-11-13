@@ -9,7 +9,6 @@
         @content
     }
 }
-
 @mixin brightness {
     cursor: pointer;
     filter: brightness(110%);
@@ -20,3 +19,14 @@
 @mixin violethover ($colour:$colour-primary){
     background-color:lighten($colour, 35%) ;
 }
+@mixin transition($value) {
+    -webkit-transition: $value ;
+     -moz-transition: $value ;
+            transition: $value ;
+  }
+  
+  @mixin delay( $delay ) {
+    -webkit-animation-delay: $delay;
+     -moz-animation-delay: $delay;
+    animation-delay: $delay;
+  }
