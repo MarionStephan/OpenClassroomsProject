@@ -1,4 +1,4 @@
-@-webkit-keyframes enter {
+@-webkit-keyframes debutloader {
   0% {
     opacity: 0;
     top: -100px;
@@ -7,16 +7,16 @@
     opacity: 1;
     top: 0px;
   }
-  50.9% {
+  50% {
     opacity: 1;
     top: 0px;
   }
-  55.9% {
+  55% {
     opacity: 0;
     top: 100px;
   }
 }
-@keyframes enter {
+@keyframes debutloader {
   0% {
     opacity: 0;
     top: -100px;
@@ -25,11 +25,11 @@
     opacity: 1;
     top: 0px;
   }
-  50.9% {
+  50% {
     opacity: 1;
     top: 0px;
   }
-  55.9% {
+  55% {
     opacity: 0;
     top: 100px;
   }
@@ -187,7 +187,7 @@ header {
           animation: fadeout 0.2s 3s forwards;
 }
 
-.square {
+.carre {
   background: #9356DC;
   width: 30px;
   height: 30px;
@@ -197,61 +197,61 @@ header {
   margin-top: 5px;
   position: relative;
   opacity: 0;
-  -webkit-animation: enter 6s infinite;
-  animation: enter 6s infinite;
+  -webkit-animation: debutloader 6s infinite;
+  animation: debutloader 6s infinite;
 }
 
-.enter {
+.debut {
   top: 0px;
   opacity: 1;
 }
 
-.square:nth-child(odd) {
+.carre:nth-child(odd) {
   background-color: #FF79DA;
 }
 
-.square:nth-child(1) {
+.carre:nth-child(1) {
   -webkit-animation-delay: 1.8s;
-  animation-delay: 1.8s;
+          animation-delay: 1.8s;
 }
 
-.square:nth-child(2) {
+.carre:nth-child(2) {
   -webkit-animation-delay: 2.1s;
-  animation-delay: 2.1s;
+          animation-delay: 2.1s;
 }
 
-.square:nth-child(3) {
+.carre:nth-child(3) {
   -webkit-animation-delay: 2.4s;
-  animation-delay: 2.4s;
+          animation-delay: 2.4s;
   background: url(../../images/utensils-solid.svg);
   background-color: #99E2D0;
   background-position: 100%;
   background-repeat: no-repeat;
 }
 
-.square:nth-child(4) {
+.carre:nth-child(4) {
   -webkit-animation-delay: 0.9s;
-  animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 
-.square:nth-child(5) {
+.carre:nth-child(5) {
   -webkit-animation-delay: 1.2s;
-  animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 
-.square:nth-child(6) {
+.carre:nth-child(6) {
   -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
-.square:nth-child(8) {
+.carre:nth-child(8) {
   -webkit-animation-delay: 0.3s;
-  animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
-.square:nth-child(9) {
+.carre:nth-child(9) {
   -webkit-animation-delay: 0.6s;
-  animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 .clear {

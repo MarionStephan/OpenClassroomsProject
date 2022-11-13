@@ -1,55 +1,19 @@
-@-webkit-keyframes enter{
+@keyframes debutloader{
   0%   { 
     opacity: 0;
-    top: $topenter;
+    top: $topdebut;
   }
   5%   { 
     opacity: 1;
     top: 0px;
   }
-  50.9% { 
+  50% { 
     opacity: 1;
     top: 0px;
   }
-  55.9% { 
+  55% { 
     opacity: 0;
-    top: - $topenter;
-  }
-}
-@keyframes enter{
-  0%   { 
-    opacity: 0;
-    top: $topenter;
-  }
-  5%   { 
-    opacity: 1;
-    top: 0px;
-  }
-  50.9% { 
-    opacity: 1;
-    top: 0px;
-  }
-  55.9% { 
-    opacity: 0;
-    top: - $topenter;
-  }
-}
-@-moz-keyframes enter{
-  0%   { 
-    opacity: 0;
-    top: $topenter;
-  }
-  5%   { 
-    opacity: 1;
-    top: 0px;
-  }
-  50.9% { 
-    opacity: 1;
-    top: 0px;
-  }
-  55.9% { 
-    opacity: 0;
-    top: - $topenter;
+    top: - $topdebut;
   }
 }
 @keyframes fadeout {

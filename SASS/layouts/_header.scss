@@ -28,8 +28,6 @@ header{
     left: 0;
     top: 0;
     background-color: hsla(0,0%,100%,.9);
-      // animation-delay: 0s;
-      // animation-fill-mode: none;
     animation-delay: 1.75s;
     animation-fill-mode: both;
     z-index: 10000;
@@ -38,55 +36,53 @@ header{
     justify-content: center;
     animation: fadeout 0.2s 3s forwards;
     }
-    .square{
+    .carre{
       background: $colour-primary;
-      width: $squarew;
-      height: $squareh;
+      width: $carrew;
+      height: $carreh;
       float: left;
-      top: $topenter;
-      margin-right: $squaremargin;
-      margin-top: $squaremargin;
+      top: $topdebut;
+      margin-right: $carremargin;
+      margin-top: $carremargin;
       position:relative;
       opacity: 0;
-      -webkit-animation: enter 6s infinite;
-      animation: enter 6s infinite;
+      -webkit-animation: debutloader 6s infinite;
+      animation: debutloader 6s infinite;
     }
-    .enter{
+    .debut{
       top: 0px;
       opacity: 1;
     }
-    
-    .square:nth-child(odd) {
+    .carre:nth-child(odd) {
       background-color: $colour-secondary;
     }
-    
-    .square:nth-child(1){
-      @include delay(6 * $delayenter);
+    .carre:nth-child(1){
+      @include delay(6 * $delaydebut);
     }
-    .square:nth-child(2){
-     @include delay(7 * $delayenter);
+    .carre:nth-child(2){
+     @include delay(7 * $delaydebut);
     }
-    .square:nth-child(3){
-      @include delay(8 * $delayenter);
+    .carre:nth-child(3){
+      @include delay(8 * $delaydebut);
       background: url(../../images/utensils-solid.svg);
       background-color: $colour-tertiary;
       background-position: 100%;
       background-repeat: no-repeat;
     }
-    .square:nth-child(4){
-      @include delay(3 * $delayenter);
+    .carre:nth-child(4){
+      @include delay(3 * $delaydebut);
     }
-    .square:nth-child(5){
-      @include delay(4 * $delayenter);
+    .carre:nth-child(5){
+      @include delay(4 * $delaydebut);
     }
-    .square:nth-child(6){
-      @include delay(5 * $delayenter);
+    .carre:nth-child(6){
+      @include delay(5 * $delaydebut);
     }
-    .square:nth-child(8){
-      @include delay(1 * $delayenter);
+    .carre:nth-child(8){
+      @include delay(1 * $delaydebut);
     }
-    .square:nth-child(9){
-      @include delay(2 * $delayenter);
+    .carre:nth-child(9){
+      @include delay(2 * $delaydebut);
     }
     .clear{
       clear: both;

@@ -7,12 +7,12 @@ $breakpoints: (
   desktop: 992px,
   tablet: 768px,
 );
-$squarew: 30px;
-$squareh: 30px;
-$squaremargin: 5px;
-$loaderw: $squarew * 3 + $squaremargin *2;
-$loaderh: $squareh * 3 + $squaremargin *2;
-$delayenter: 0.3s;
-$topenter: -100px;
+$carrew: 30px;
+$carreh: 30px;
+$carremargin: 5px;
+$loaderw: $carrew * 3 + $carremargin *2;
+$loaderh: $carreh * 3 + $carremargin *2;
+$delaydebut: 0.3s;
+$topdebut: -100px;
 
 
