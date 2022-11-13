@@ -52,7 +52,7 @@
 }
 
 .tuto{
-    padding: 2rem 1rem;
+    padding: 30px 15px;
     &__titre{
         @include tablet-only{
             text-align: center;
@@ -70,11 +70,11 @@
         }
     }
     &__etapes{
-        padding: 1.5rem;
-        margin: 1rem 0 1rem .75rem;
-          margin-top: 1rem;
-        box-shadow: .25rem .25rem .5rem rgba(0,0,0,.125);
-        border-radius: 1.25rem;
+        padding: 24px;
+        margin: 15px 0 15px 12px;
+          margin-top: 15px;
+        box-shadow: 4px 4px 8px rgba(0,0,0,.125);
+        border-radius: 20px;
         background-color: #f6f6f6;
         display: flex;
         position: relative;
@@ -82,15 +82,15 @@
         counter-increment: compteListe 1;
         content: counter(compteListe) " ";
         background: $colour-primary;
-        height: 1.5rem;
-        width: 1.5rem;
+        height: 24px;
+        width: 24px;
         border-radius: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
         color: #fff;
         position: absolute;
-        left: -.75rem;
+        left: -12px;
       }
       &:hover{
         @include violethover;
@@ -106,7 +106,38 @@
         text-decoration: none;
     }
     &__icone{
-        margin-right: 1rem;
+        margin-right: 16px;
         color: #7e7e7e;
       }
     }
+.restaurants{
+    padding: 30px 15px;
+    background-color: #F3F3F3;
+    &__liste{
+        width: 100%;
+    }
+    &__fiche{
+        position: relative;
+        text-decoration: none;
+        color: black;
+    }
+    &__figure{
+        margin: 0;
+
+    }
+    &__img{
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+        object-fit: cover;
+    }
+    &__new{
+        background: #a9e0d1;
+        color: #389873;
+        font-weight: bold;
+        padding: 7px 15px;
+        border-radius: 2px;
+        position: absolute;
+        top: 5px;
+        right: 15px;
+    }
+}

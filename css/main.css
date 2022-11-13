@@ -59,10 +59,6 @@
   left: 0;
   top: 0;
   background-color: hsla(0deg, 0%, 100%, 0.9);
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-  -webkit-animation-fill-mode: none;
-          animation-fill-mode: none;
   -webkit-animation-delay: 1.75s;
           animation-delay: 1.75s;
   -webkit-animation-fill-mode: both;
@@ -271,7 +267,7 @@ header {
 }
 
 .tuto {
-  padding: 2rem 1rem;
+  padding: 30px 15px;
 }
 @media screen and (min-width: 768px) {
   .tuto__titre {
@@ -292,11 +288,11 @@ header {
   }
 }
 .tuto__etapes {
-  padding: 1.5rem;
-  margin: 1rem 0 1rem 0.75rem;
-  margin-top: 1rem;
-  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
-  border-radius: 1.25rem;
+  padding: 24px;
+  margin: 15px 0 15px 12px;
+  margin-top: 15px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.125);
+  border-radius: 20px;
   background-color: #f6f6f6;
   display: flex;
   position: relative;
@@ -305,15 +301,15 @@ header {
   counter-increment: compteListe 1;
   content: counter(compteListe) " ";
   background: #9356DC;
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 24px;
+  width: 24px;
   border-radius: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
   position: absolute;
-  left: -0.75rem;
+  left: -12px;
 }
 .tuto__etapes:hover {
   background-color: #f2eafb;
@@ -330,6 +326,38 @@ header {
   text-decoration: none;
 }
 .tuto__icone {
-  margin-right: 1rem;
+  margin-right: 16px;
   color: #7e7e7e;
+}
+
+.restaurants {
+  padding: 30px 15px;
+  background-color: #F3F3F3;
+}
+.restaurants__liste {
+  width: 100%;
+}
+.restaurants__fiche {
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+.restaurants__figure {
+  margin: 0;
+}
+.restaurants__img {
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurants__new {
+  background: #a9e0d1;
+  color: #389873;
+  font-weight: bold;
+  padding: 7px 15px;
+  border-radius: 2px;
+  position: absolute;
+  top: 5px;
+  right: 15px;
 }/*# sourceMappingURL=main.css.map */

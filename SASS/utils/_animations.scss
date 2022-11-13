@@ -89,8 +89,8 @@ width: 100%;
 left: 0;
 top: 0;
 background-color: hsla(0,0%,100%,.9);
-  animation-delay: 0s;
-  animation-fill-mode: none;
+  // animation-delay: 0s;
+  // animation-fill-mode: none;
 animation-delay: 1.75s;
 animation-fill-mode: both;
 z-index: 10000;
@@ -143,8 +143,6 @@ animation: fadeout 0.2s 3s forwards;
 .square:nth-child(6){
   @include delay(5 * $delayenter);
 }
-.square:nth-child(7){
-  }
 .square:nth-child(8){
   @include delay(1 * $delayenter);
 }
