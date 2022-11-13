@@ -1,10 +1,4 @@
-$squarew: 30px;
-$squareh: 30px;
-$squaremargin: 5px;
-$loaderw: $squarew * 3 + $squaremargin *2;
-$loaderh: $squareh * 3 + $squaremargin *2;
-$delayenter: 0.3s;
-$topenter: -100px;
+
 
 @mixin transition($value) {
   -webkit-transition: $value ;
@@ -152,4 +146,6 @@ animation: fadeout 0.2s 3s forwards;
 .clear{
   clear: both;
  }
+
+
 

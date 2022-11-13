@@ -335,18 +335,26 @@ header {
   background-color: #F3F3F3;
 }
 .restaurants__liste {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 .restaurants__fiche {
   position: relative;
   text-decoration: none;
   color: black;
+  height: 300px;
+  box-shadow: 0px 15px 15px 3px #E5E5E5;
+  border-radius: 0 0 15px 15px;
+  border: transparent;
 }
 .restaurants__figure {
   margin: 0;
+  height: 100%;
 }
 .restaurants__img {
   width: 100%;
+  height: 70%;
   border-radius: 15px 15px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
@@ -360,4 +368,36 @@ header {
   position: absolute;
   top: 5px;
   right: 15px;
+}
+.restaurants__figcaption {
+  height: 30%;
+  border-radius: 0 0 15px 15px;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.restaurants__figcaption :first-child {
+  grid-area: 1/1/2/2;
+}
+.restaurants__figcaption :nth-child(2) {
+  grid-area: 2/1/3/2;
+}
+.restaurants__figcaption :last-child {
+  grid-area: 1/2/3/3;
+  justify-self: center;
+  align-self: center;
+}
+.restaurants__nom {
+  margin: 0;
+  padding: 10px 0 0 10px;
+}
+.restaurants__metro {
+  margin: 0;
+  padding-left: 10px;
+  padding-top: 0;
+}
+.restaurants__coeur {
+  font-size: 25px;
 }/*# sourceMappingURL=main.css.map */
