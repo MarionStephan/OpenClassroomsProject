@@ -145,27 +145,17 @@ body {
 }
 
 header {
-  margin-top: 20px;
-}
-@media screen and (min-width: 992px) {
-  header {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-  }
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header__logo {
-  display: block;
-  width: 50%;
-  margin: auto;
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 992px) {
-  .header__logo {
-    width: 25%;
-    margin: 0;
-  }
+.header__retour {
+  position: absolute;
+  left: 20px;
+  color: #000;
+  font-size: 20px;
 }
 
 .loader {
@@ -513,4 +503,11 @@ footer {
   font-family: "Font Awesome 6 Free";
   content: "\f004";
   font-weight: 900;
+}
+
+.menu__image {
+  height: 350px;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=main.css.map */

@@ -1,23 +1,16 @@
 header{
-     margin-top: 20px;
-     @include desktop-only{
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 20px;
-     }
-    
-
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // position: relative;
 }
 .header{
-    &__logo{
-        display: block;
-        width: 50%;
-        margin: auto;
-        margin-bottom: 20px; 
-        @include desktop-only{
-            width: 25%;
-            margin: 0;
-        } 
+    &__retour{
+      position: absolute;
+      left: 20px;
+      color: #000;
+      font-size: 20px;
     }
     
 }
