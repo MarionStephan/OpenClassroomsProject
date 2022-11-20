@@ -1,17 +1,29 @@
 .menu{
     background-color: #f5f5f5;
-    margin-top: -100px;
+    margin-top: -60px;
     border-radius: 50px 50px 0 0;
     position: relative;
-    padding: 20px;
-    // width: 100%;
+    padding: 20px 20px 30px 20px;
+    @include desktop-only{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .menu__plat{
+            width: 25%;
+        }
+    }
     &__image{
-        height: 350px;
+        height: 300px;
         width: 100%;
         object-fit: cover;}
     &__header{
         display: flex;
         justify-content: space-evenly;
+        @include desktop-only{
+            width: 100%;
+            justify-content: center;
+            gap: 30px;
+        }
         & h1{
             font-family: Shrikhand;
             font-style: italic;
@@ -43,22 +55,77 @@
             bottom: 0;
         }
     }
-    &__item{
-        display: flex;
-        justify-content: space-between;
-        background-color: white;
-        padding: 10px 20px 10px 10px;
-        border: transparent solid 1px;
-        border-radius: 15px;
-        box-shadow: 0px 15px 15px 3px #E5E5E5;
-        &__prix{
-            align-self:flex-end;
-            font-weight: bold;
-        }
-    }
     &__info{
-        &__titre, &__text{
+        width: 80%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        &>*{
             margin: 0;
         }
     }
+    &__card{
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        padding: 10px 0px 10px 10px;
+        border: transparent solid 0px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 15px 3px #E5E5E5;
+        animation: menu 1s forwards;
+        opacity: 0;
+        overflow: hidden;
+        &:nth-child(2){
+            @include delay(2 * $delaydebut);
+        }
+        &:nth-child(3){
+            @include delay(3 * $delaydebut);
+        }
+        &:nth-child(4){
+            @include delay(4 * $delaydebut);
+        }
+        &__prix{
+            display: flex;
+            align-self:flex-end;
+            justify-content: flex-end;
+            font-weight: bold;
+            padding-left: 0px;
+        }
+    
+}
+}
+.menu__card__validation {
+background-color: #99e2d0;
+margin: -1rem -5rem -1rem 1rem;
+width: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+transition-duration: .5s;
+}
+.menu__card__icon{
+height: 1.6rem;
+width: 1.6rem;
+background-color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 100px;
+transform: rotate(360deg);
+transition-duration: .5s;
+ & i{
+    color: $colour-tertiary;
+    &:before{
+    content: "\f00c";
+    font-family: FontAwesome;
+ }
+}
+}
+.menu__card:hover {
+    & .menu__card__icon{
+transform: rotate(0);
+}
+& .menu__card__validation{
+    margin-right: 0px;
+}
 }
