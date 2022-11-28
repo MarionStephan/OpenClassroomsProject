@@ -58,14 +58,22 @@
     opacity: 1;
   }
 }
-// @keyframes validation{
-// 0%{
-//   width: 0;
-//   opacity: 0;
-// }
-// 100%{
-//   width: 20px;
-//   opacity: 1;
-// }
-// }
+@keyframes validation{
+0%{
+  margin-right: -5rem;
+  opacity: 0;
+}
+100%{
+  margin-right: 0;
+  opacity: 1;
+}
+}
+@keyframes rotateicon {
+  0%{
+    rotate: 180deg;
+  }
+  100%{
+    rotate: 0deg;
+  }
+}
 

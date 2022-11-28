@@ -4,58 +4,48 @@
     border-radius: 50px 50px 0 0;
     position: relative;
     padding: 20px 20px 30px 20px;
-
     @include desktop-only {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-
-        .menu__plat {
-            width: 25%;
-        }
     }
-
     &__image {
         height: 300px;
         width: 100%;
         object-fit: cover;
     }
-
     &__header {
         display: flex;
         justify-content: space-evenly;
-
         @include desktop-only {
             width: 100%;
             justify-content: center;
             gap: 30px;
         }
-
         & h1 {
             font-family: Shrikhand;
             font-style: italic;
             font-size: 30px;
         }
-
         & .restaurants__coeur {
             align-self: center;
             font-size: 30px;
         }
     }
-
     &__plat {
         display: flex;
         flex-direction: column;
         gap: 15px;
+        @include desktop-only {
+            width: 30%;
+        }
     }
-
     &__titre {
         text-transform: uppercase;
         font-weight: 400;
         position: relative;
         padding-bottom: 10px;
         margin-bottom: 0;
-
         &::after {
             content: "";
             width: 3rem;
@@ -66,14 +56,16 @@
             bottom: 0;
         }
     }
-
     &__info {
-        width: 80%;
+        max-width: 80%;
+        flex: 1;
         &>* {
             margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
     }
-
     &__card {
         display: flex;
         justify-content: space-between;
@@ -85,19 +77,15 @@
         animation: menu 1s forwards;
         opacity: 0;
         overflow: hidden;
-
         &:nth-child(2) {
             @include delay(2 * $delaydebut);
         }
-
         &:nth-child(3) {
             @include delay(3 * $delaydebut);
         }
-
         &:nth-child(4) {
             @include delay(4 * $delaydebut);
         }
-
         &__prix {
             display: flex;
             align-self: flex-end;
@@ -105,54 +93,43 @@
             font-weight: bold;
             padding-left: 0px;
         }
-
-    }
-}
-
-.menu__card__validation {
-    background-color: #99e2d0;
-    margin: -1rem -5rem -1rem 1rem;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition-duration: .5s;
-}
-
-.menu__card__icon {
-    height: 1.6rem;
-    width: 1.6rem;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
-    transform: rotate(360deg);
-    transition-duration: .5s;
-
-    & i {
-        color: $colour-tertiary;
-
-        &:before {
-            content: "\f00c";
-            font-family: FontAwesome;
+        &__validation {
+            background-color: #99e2d0;
+            margin: -1rem -5rem -1rem 1rem;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-    }
-}
-
-.menu__card:hover {
-    & .menu__card__icon {
-        transform: rotate(0);
-    }
-
-    & .menu__card__validation {
-        margin-right: 0px;
-    }
-
-    & .menu__info__text {
-        max-width: 95%;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        &__icon {
+            height: 1.6rem;
+            width: 1.6rem;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100px;
+            & i {
+                color: $colour-tertiary;
+                &:before {
+                    content: "\f00c";
+                    font-family: FontAwesome;
+                }
+            }
+        }
+        &:hover {
+            & .menu__card__icon {
+                animation: rotateicon 0.5s 1 forwards;
+            }
+            & .menu__card__validation {
+                animation: validation 0.5s 1 both;
+            }
+            & .menu__info {
+                max-width: 80%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
     }
 }
