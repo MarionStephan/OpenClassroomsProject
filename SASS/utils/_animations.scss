@@ -1,79 +1,105 @@
-@keyframes debutloader{
-  0%   { 
+@keyframes debutloader {
+  0% {
     opacity: 0;
     top: $topdebut;
   }
-  5%   { 
+
+  5% {
     opacity: 1;
     top: 0px;
   }
-  50% { 
+
+  100% {
     opacity: 1;
     top: 0px;
-  }
-  55% { 
-    opacity: 0;
-    top: - $topdebut;
   }
 }
+
+@keyframes loadertext {
+  0% {
+    opacity: 0;
+    top: $topdebut;
+  }
+
+  5% {
+    opacity: 1;
+    top: 0px;
+  }
+
+  50% {
+    transform: scale(2);
+  }
+
+  100% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
 @keyframes fadeout {
-0% {
+  0% {
     opacity: 100%;
   }
+
   100% {
     opacity: 0%;
     visibility: hidden;
   }
 }
 
-
 @keyframes coeur {
-  0%{
-      scale: 1;
+  0% {
+    transform: scale(1);
   }
-  25%{
-    scale: 1.1;
+
+  25% {
+    transform: scale(1.1);
     background: $gradient;
     background-clip: text;
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  50%{
-    scale: 1.2;
+
+  50% {
+    transform: scale(1.2);
   }
-  100%{
+
+  100% {
     background: $gradient;
     background-clip: text;
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
-@keyframes menu{
-  0%{
+
+@keyframes menu {
+  0% {
     transform: translatey(20px);
     opacity: 0;
   }
-  100%{
+
+  100% {
     transform: translatey(0px);
     opacity: 1;
   }
 }
-@keyframes validation{
-0%{
-  margin-right: -5rem;
-  opacity: 0;
-}
-100%{
-  margin-right: 0;
-  opacity: 1;
-}
-}
-@keyframes rotateicon {
-  0%{
-    rotate: 180deg;
+
+@keyframes validation {
+  0% {
+    margin-right: -5rem;
+    opacity: 0;
   }
-  100%{
-    rotate: 0deg;
+
+  100% {
+    margin-right: 0;
+    opacity: 1;
   }
 }
 
+@keyframes rotateicon {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

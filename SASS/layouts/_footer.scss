@@ -1,14 +1,16 @@
 footer {
-    background-color: rgb(59, 59, 62);
+    background: rgb(59, 59, 62);
     color: white;
-    width: 100%;
     position: absolute;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: -10px;
+    padding-bottom: 10px;
 }
 
 .footer {
     &__titre {
-        margin: 0;
-        padding: 15px;
+        @include margin-padding(all, 0, all, 15px);
         font-family: Shrikhand;
         font-weight: lighter;
 
@@ -18,10 +20,8 @@ footer {
     }
 
     &__liste {
+        @include margin-padding(all, 0, all, 0 0 20px 15px);
         list-style: none;
-        padding-left: 15px;
-        padding-bottom: 20px;
-        margin: 0;
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -34,11 +34,11 @@ footer {
     &__items {
         &>a {
             text-decoration: none;
-            color: white;
+            color: $white;
         }
 
         &>i {
-            margin-right: 10px;
+            @include margin-padding(right, 15px, null, null);
             font-size: 12px;
         }
     }

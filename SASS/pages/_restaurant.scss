@@ -1,64 +1,74 @@
 .menu {
-    background-color: #f5f5f5;
-    margin-top: -60px;
-    border-radius: 50px 50px 0 0;
+    @include margin-padding(top, -60px, all, 20px 20px 30px 20px);
+    @include borderradius(50px 50px 0 0);
+    background-color: $light-grey;
     position: relative;
-    padding: 20px 20px 30px 20px;
+
     @include desktop-only {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
     }
+
     &__image {
         height: 300px;
         width: 100%;
         object-fit: cover;
     }
+
     &__header {
         display: flex;
         justify-content: space-evenly;
+
         @include desktop-only {
             width: 100%;
             justify-content: center;
             gap: 30px;
         }
+
         & h1 {
             font-family: Shrikhand;
             font-style: italic;
             font-size: 30px;
         }
+
         & .restaurants__coeur {
             align-self: center;
             font-size: 30px;
         }
     }
+
     &__plat {
         display: flex;
         flex-direction: column;
         gap: 15px;
+
         @include desktop-only {
             width: 30%;
         }
     }
+
     &__titre {
         text-transform: uppercase;
         font-weight: 400;
         position: relative;
-        padding-bottom: 10px;
-        margin-bottom: 0;
+        @include margin-padding(bottom, 0, bottom, 10px);
+
         &::after {
             content: "";
-            width: 3rem;
-            height: .25rem;
-            background-color: #99e2d0;
+            width: 50px;
+            height: 5px;
+            background-color: $colour-tertiary;
             position: absolute;
             left: 0;
             bottom: 0;
         }
     }
+
     &__info {
         max-width: 80%;
         flex: 1;
+
         &>* {
             margin: 0;
             white-space: nowrap;
@@ -66,64 +76,80 @@
             overflow: hidden;
         }
     }
+
     &__card {
         display: flex;
         justify-content: space-between;
-        background-color: white;
-        padding: 10px 0px 10px 10px;
+        background-color: $white;
+        @include margin-padding(null, null, all, 10px 0 10px 10px);
         border: transparent solid 0px;
-        border-radius: 15px;
-        box-shadow: 0px 0px 15px 3px #E5E5E5;
+        @include borderradius(15px);
+        @include shadow(#E5E5E5 0px 0px 15px 3px);
         animation: menu 1s forwards;
         opacity: 0;
         overflow: hidden;
+
         &:nth-child(2) {
             @include delay(2 * $delaydebut);
         }
+
         &:nth-child(3) {
             @include delay(3 * $delaydebut);
         }
+
         &:nth-child(4) {
             @include delay(4 * $delaydebut);
         }
+
+        &:nth-child(5) {
+            @include delay(5 * $delaydebut);
+        }
+
         &__prix {
             display: flex;
             align-self: flex-end;
             justify-content: flex-end;
             font-weight: bold;
-            padding-left: 0px;
+            @include margin-padding(right, 20px, null, null);
         }
+
         &__validation {
-            background-color: #99e2d0;
-            margin: -1rem -5rem -1rem 1rem;
+            background: $colour-tertiary;
+            @include margin-padding(all, -16px -80px -16px -16px, null, null);
             width: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
+
         &__icon {
-            height: 1.6rem;
-            width: 1.6rem;
-            background-color: #fff;
+            height: 25px;
+            width: 25px;
+            background-color: $white;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 100px;
+            @include borderradius(100px);
+
             & i {
                 color: $colour-tertiary;
+
                 &:before {
                     content: "\f00c";
                     font-family: FontAwesome;
                 }
             }
         }
+
         &:hover {
             & .menu__card__icon {
-                animation: rotateicon 0.5s 1 forwards;
+                animation: rotateicon 0.5s 1 0.2s forwards;
             }
+
             & .menu__card__validation {
                 animation: validation 0.5s 1 both;
             }
+
             & .menu__info {
                 max-width: 80%;
                 white-space: nowrap;

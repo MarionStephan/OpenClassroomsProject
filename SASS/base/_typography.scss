@@ -1,30 +1,11 @@
 @font-face {
     font-family: Roboto;
-    src: url(../police/Roboto-Regular.ttf) format(ttf);
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: Roboto;
-    src: url(../police/Roboto-Thin.ttf) format(ttf);
-    font-weight: lighter;
-    font-style: normal;
+    src: url(../police/Roboto-Regular.ttf) format("ttf");
 }
 @font-face {
     font-family: Shrikhand;
-    src: url(../police/Shrikhand.ttf) format(ttf);
-    font-weight: normal;
-    font-style: normal;
+    src: url(../police/Shrikhand.ttf) format("ttf");
 }
 *{
     font-family: Roboto;
-}
-
-@counter-style listetuto{
-    system:cyclic;
-    symbols:1 2 3 ;
-    suffix: " ";
-    color:white;
-    background-color:$colour-primary;
-
 }

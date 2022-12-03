@@ -1,82 +1,97 @@
-header{
-  margin: 20px 0;
+header {
+  @include margin-padding (all, 20px 0, null, null);
+  background-color: $white;
   display: flex;
   justify-content: center;
   align-items: center;
-  // position: relative;
 }
-.header{
-    &__retour{
-      position: absolute;
-      left: 20px;
-      color: #000;
-      font-size: 20px;
-    }
-    
+
+.header__retour {
+  position: absolute;
+  left: 20px;
+  color: #000;
+  font-size: 20px;
 }
-.loader{
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: hsla(0,0%,100%,.9);
-    animation-delay: 1.75s;
-    animation-fill-mode: both;
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: fadeout 0.2s 3s forwards;
+
+.loader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeout 0.2s 3.5s forwards;
+
+  & .container__carre {
+    background: $colour-primary;
+    width: $carrew;
+    height: $carreh;
+    border-radius: 100%;
+    float: left;
+    top: $topdebut;
+    margin-right: $carremargin;
+    margin-top: $carremargin;
+    position: relative;
+    opacity: 0;
+    animation: debutloader 5s forwards;
+
+    &:nth-child(odd) {
+      background: $colour-secondary;
     }
-    .carre{
+
+    &:nth-child(even) {
       background: $colour-primary;
-      width: $carrew;
-      height: $carreh;
-      float: left;
-      top: $topdebut;
-      margin-right: $carremargin;
-      margin-top: $carremargin;
-      position:relative;
-      opacity: 0;
-      -webkit-animation: debutloader 6s infinite;
-      animation: debutloader 6s infinite;
     }
-    .debut{
-      top: 0px;
-      opacity: 1;
-    }
-    .carre:nth-child(odd) {
-      background-color: $colour-secondary;
-    }
-    .carre:nth-child(1){
+
+    &:nth-child(1) {
       @include delay(6 * $delaydebut);
     }
-    .carre:nth-child(2){
-     @include delay(7 * $delaydebut);
+
+    &:nth-child(2) {
+      @include delay(7 * $delaydebut);
     }
-    .carre:nth-child(3){
+
+    &:nth-child(3) {
       @include delay(8 * $delaydebut);
-      background: url(../../images/utensils-solid.svg);
-      background-color: $colour-tertiary;
-      background-position: 100%;
-      background-repeat: no-repeat;
     }
-    .carre:nth-child(4){
+
+    &:nth-child(4) {
       @include delay(3 * $delaydebut);
     }
-    .carre:nth-child(5){
+
+    &:nth-child(5) {
       @include delay(4 * $delaydebut);
     }
-    .carre:nth-child(6){
+
+    &:nth-child(6) {
       @include delay(5 * $delaydebut);
     }
-    .carre:nth-child(8){
+
+    &:nth-child(8) {
       @include delay(1 * $delaydebut);
     }
-    .carre:nth-child(9){
+
+    &:nth-child(9) {
       @include delay(2 * $delaydebut);
     }
-    .clear{
-      clear: both;
-     }
+  }
+
+  &__text {
+    position: relative;
+    font-family: Shrikhand;
+    font-size: 25px;
+    color: $colour-tertiary;
+    animation: loadertext 0.5s 1 forwards;
+    @include delay(9 * $delaydebut);
+    opacity: 0;
+  }
+
+  .clear {
+    clear: both;
+  }
+}
