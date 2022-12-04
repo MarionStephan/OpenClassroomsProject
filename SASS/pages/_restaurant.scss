@@ -120,6 +120,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            @include transition (0.5s)
         }
 
         &__icon {
@@ -147,7 +148,7 @@
             }
 
             & .menu__card__validation {
-                animation: validation 0.5s 1 both;
+                @include validation;
             }
 
             & .menu__info {

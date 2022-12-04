@@ -82,16 +82,8 @@
   }
 }
 
-@keyframes validation {
-  0% {
-    margin-right: -5rem;
-    opacity: 0;
-  }
-
-  100% {
-    margin-right: 0;
-    opacity: 1;
-  }
+@mixin validation {
+  margin-right: 0px;
 }
 
 @keyframes rotateicon {
