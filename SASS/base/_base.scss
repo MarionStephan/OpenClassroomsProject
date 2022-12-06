@@ -1,6 +1,14 @@
-body {
-    @include margin-padding (all, 0, null, null);
+*{
     box-sizing: border-box;
+}
+html,body{
+    @include margin-padding(all,0,all,0);
     height: 100%;
-    background-color: $white;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex:1 0 auto;
 }

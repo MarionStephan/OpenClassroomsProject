@@ -11,7 +11,7 @@
     }
 
     &__image {
-        height: 300px;
+        height: 330px;
         width: 100%;
         object-fit: cover;
     }
@@ -20,13 +20,7 @@
         display: flex;
         justify-content: space-evenly;
 
-        @include desktop-only {
-            width: 100%;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        & h1 {
+        &__titre {
             font-family: Shrikhand;
             font-style: italic;
             font-size: 30px;
@@ -35,6 +29,12 @@
         & .restaurants__coeur {
             align-self: center;
             font-size: 30px;
+        }
+
+        @include desktop-only {
+            width: 100%;
+            justify-content: center;
+            gap: 30px;
         }
     }
 
@@ -89,6 +89,16 @@
         opacity: 0;
         overflow: hidden;
 
+        @include tablet-only {
+            width: 80%;
+            @include margin-padding(all, auto, null, null)
+        }
+
+        @include desktop-only {
+            width: 100%;
+            @include margin-padding(all, 0, all, 10px 0 10px 10px);
+        }
+
         &:nth-child(2) {
             @include delay(2 * $delaydebut);
         }
@@ -110,7 +120,7 @@
             align-self: flex-end;
             justify-content: flex-end;
             font-weight: bold;
-            @include margin-padding(right, 20px, null, null);
+            @include margin-padding(all, 0 30px 0 10px, null, null);
         }
 
         &__validation {

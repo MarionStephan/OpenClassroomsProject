@@ -1,11 +1,7 @@
 footer {
     background: rgb(59, 59, 62);
     color: white;
-    position: absolute;
-    width: 100%;
-    margin-top: 0;
-    margin-bottom: -10px;
-    padding-bottom: 10px;
+    flex-shrink: 0;
 }
 
 .footer {
