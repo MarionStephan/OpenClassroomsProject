@@ -49,6 +49,16 @@
         font-weight: lighter;
         @include margin-padding(bottom, 30px, null, null);
     }
+
+    & button {
+        @include margin-padding(bottom, 30px, all, 15px);
+
+        &:hover {
+            @include brightness;
+            @include shadow(rgb(94, 95, 96) 0px 8px 24px);
+        }
+    }
+
 }
 
 .tuto {
@@ -62,7 +72,7 @@
 
     &__liste {
         list-style-type: none;
-        @include margin-padding(null, null, null, null);
+        @include margin-padding(null, null, all, 0);
         list-style: none;
         counter-reset: compteListe;
 
@@ -96,7 +106,7 @@
         }
 
         &:hover {
-            @include violethover;
+            @include lightenhover ($colour-primary);
 
             .tuto__icone {
                 color: $colour-primary;

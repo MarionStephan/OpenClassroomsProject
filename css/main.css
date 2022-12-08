@@ -92,7 +92,7 @@
     background: linear-gradient(#FF79DA, #9356DC);
     -webkit-background-clip: text;
             background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
   50% {
     transform: scale(1.2);
@@ -101,7 +101,7 @@
     background: linear-gradient(#FF79DA, #9356DC);
     -webkit-background-clip: text;
             background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
 }
 @keyframes coeur {
@@ -113,7 +113,7 @@
     background: linear-gradient(#FF79DA, #9356DC);
     -webkit-background-clip: text;
             background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
   50% {
     transform: scale(1.2);
@@ -122,7 +122,7 @@
     background: linear-gradient(#FF79DA, #9356DC);
     -webkit-background-clip: text;
             background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: transparent;
   }
 }
 @-webkit-keyframes menu {
@@ -192,20 +192,13 @@ main {
   font-family: Roboto;
 }
 
-.explore__button {
-  margin-bottom: 30px;
-  padding: 15px;
+.button {
   border-radius: 25px;
   box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   border: 0;
   font-size: 16px;
-}
-.explore__button:hover {
-  cursor: pointer;
-  filter: brightness(110%);
-  box-shadow: rgb(94, 95, 96) 0px 8px 24px;
 }
 
 header {
@@ -396,6 +389,15 @@ footer {
   font-weight: lighter;
   margin-bottom: 30px;
 }
+.explore button {
+  margin-bottom: 30px;
+  padding: 15px;
+}
+.explore button:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+  box-shadow: rgb(94, 95, 96) 0px 8px 24px;
+}
 
 .tuto {
   padding: 30px 15px;
@@ -407,6 +409,7 @@ footer {
 }
 .tuto__liste {
   list-style-type: none;
+  padding: 0;
   list-style: none;
   counter-reset: compteListe;
 }
@@ -718,4 +721,22 @@ footer {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+.menu button {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 30px auto;
+  padding: 15px;
+}
+@media screen and (min-width: 992px) {
+  .menu button {
+    width: 20%;
+    margin-top: 50px;
+  }
+}
+.menu button:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+  box-shadow: rgb(94, 95, 96) 0px 8px 24px;
 }/*# sourceMappingURL=main.css.map */

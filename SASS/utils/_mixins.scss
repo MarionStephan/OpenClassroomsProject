@@ -7,7 +7,7 @@
     box-shadow: $params;
 }
 
-@mixin violethover ($colour:$colour-primary) {
+@mixin lightenhover ($colour) {
     background: lighten($colour, 35%);
 }
 

@@ -1,16 +1,8 @@
-.explore {
-    &__button {
-        @include margin-padding(bottom, 30px, all, 15px);
+.button {
         @include borderradius (25px);
         @include shadow(rgba(149, 157, 165, 0.5) 0px 8px 24px);
         background: $gradient;
         color: $white;
         border: 0;
         font-size: 16px;
-    }
-
-    &__button:hover {
-        @include brightness;
-        @include shadow(rgb(94, 95, 96) 0px 8px 24px);
-    }
 }
