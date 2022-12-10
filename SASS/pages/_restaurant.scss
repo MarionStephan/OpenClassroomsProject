@@ -26,11 +26,10 @@
             font-size: 30px;
         }
 
-        & .restaurants__coeur {
+        & .fa-heart {
             align-self: center;
             font-size: 30px;
         }
-
         @include desktop-only {
             width: 100%;
             justify-content: center;
@@ -169,18 +168,16 @@
             }
         }
     }
-    & button{
+
+    & .buttongradient {
         display: flex;
         justify-content: center;
-        width:50%;
+        width: 50%;
         @include margin-padding(all, 30px auto, all, 15px);
-        @include desktop-only{
-            width:20%;
+
+        @include desktop-only {
+            width: 20%;
             margin-top: 50px;
-        }
-        &:hover{
-            @include brightness;
-            @include shadow(rgb(94, 95, 96) 0px 8px 24px);
         }
     }
 }

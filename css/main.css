@@ -86,6 +86,7 @@
 @-webkit-keyframes coeur {
   0% {
     transform: scale(1);
+    font-weight: 900;
   }
   25% {
     transform: scale(1.1);
@@ -102,11 +103,13 @@
     -webkit-background-clip: text;
             background-clip: text;
     color: transparent;
+    font-weight: 900;
   }
 }
 @keyframes coeur {
   0% {
     transform: scale(1);
+    font-weight: 900;
   }
   25% {
     transform: scale(1.1);
@@ -123,6 +126,7 @@
     -webkit-background-clip: text;
             background-clip: text;
     color: transparent;
+    font-weight: 900;
   }
 }
 @-webkit-keyframes menu {
@@ -192,13 +196,29 @@ main {
   font-family: Roboto;
 }
 
-.button {
+.buttongradient {
   border-radius: 25px;
   box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
   border: 0;
   font-size: 16px;
+}
+.buttongradient:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+  box-shadow: rgb(94, 95, 96) 0px 8px 24px;
+}
+
+.fa-heart {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 200;
+}
+.fa-heart:hover {
+  -webkit-animation: coeur 400ms both;
+          animation: coeur 400ms both;
 }
 
 header {
@@ -393,11 +413,6 @@ footer {
   margin-bottom: 30px;
   padding: 15px;
 }
-.explore button:hover {
-  cursor: pointer;
-  filter: brightness(110%);
-  box-shadow: rgb(94, 95, 96) 0px 8px 24px;
-}
 
 .tuto {
   padding: 30px 15px;
@@ -546,17 +561,8 @@ footer {
   padding-left: 10px;
   padding-top: 0;
 }
-.restaurants__coeur {
+.restaurants .fa-heart {
   font-size: 25px;
-}
-.restaurants__coeur:hover {
-  -webkit-animation: coeur 400ms both;
-          animation: coeur 400ms both;
-}
-.restaurants__coeur .fa-heart:hover:before {
-  font-family: "Font Awesome 6 Free";
-  content: "\f004";
-  font-weight: 900;
 }
 
 .menu {
@@ -588,7 +594,7 @@ footer {
   font-style: italic;
   font-size: 30px;
 }
-.menu__header .restaurants__coeur {
+.menu__header .fa-heart {
   align-self: center;
   font-size: 30px;
 }
@@ -722,7 +728,7 @@ footer {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu button {
+.menu .buttongradient {
   display: flex;
   justify-content: center;
   width: 50%;
@@ -730,13 +736,8 @@ footer {
   padding: 15px;
 }
 @media screen and (min-width: 992px) {
-  .menu button {
+  .menu .buttongradient {
     width: 20%;
     margin-top: 50px;
   }
-}
-.menu button:hover {
-  cursor: pointer;
-  filter: brightness(110%);
-  box-shadow: rgb(94, 95, 96) 0px 8px 24px;
 }/*# sourceMappingURL=main.css.map */
