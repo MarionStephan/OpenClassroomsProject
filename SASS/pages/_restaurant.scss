@@ -27,6 +27,7 @@
         }
 
         & .fa-heart {
+            @include coeur;
             align-self: center;
             font-size: 30px;
         }

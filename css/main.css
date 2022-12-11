@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @counter-style listetuto {
   system: cyclic;
   symbols: "1" "2" "3";
@@ -184,14 +186,6 @@ main {
   flex: 1 0 auto;
 }
 
-@font-face {
-  font-family: Roboto;
-  src: url(../police/Roboto-Regular.ttf) format("ttf");
-}
-@font-face {
-  font-family: Shrikhand;
-  src: url(../police/Shrikhand.ttf) format("ttf");
-}
 * {
   font-family: Roboto;
 }
@@ -208,17 +202,6 @@ main {
   cursor: pointer;
   filter: brightness(110%);
   box-shadow: rgb(94, 95, 96) 0px 8px 24px;
-}
-
-.fa-heart {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  font-weight: 200;
-}
-.fa-heart:hover {
-  -webkit-animation: coeur 400ms both;
-          animation: coeur 400ms both;
 }
 
 header {
@@ -563,6 +546,14 @@ footer {
 }
 .restaurants .fa-heart {
   font-size: 25px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 200;
+}
+.restaurants .fa-heart:hover {
+  -webkit-animation: coeur 400ms both;
+          animation: coeur 400ms both;
 }
 
 .menu {
@@ -595,8 +586,16 @@ footer {
   font-size: 30px;
 }
 .menu__header .fa-heart {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 200;
   align-self: center;
   font-size: 30px;
+}
+.menu__header .fa-heart:hover {
+  -webkit-animation: coeur 400ms both;
+          animation: coeur 400ms both;
 }
 @media screen and (min-width: 992px) {
   .menu__header {

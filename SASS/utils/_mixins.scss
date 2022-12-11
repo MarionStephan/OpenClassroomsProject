@@ -1,3 +1,8 @@
+@counter-style listetuto {
+    system: cyclic;
+    symbols: '1''2''3';
+    suffix: " ";
+}
 @mixin brightness {
     cursor: pointer;
     filter: brightness(110%);
@@ -39,6 +44,15 @@
 
 @mixin borderradius($pixels...) {
     border-radius: $pixels
+}
+@mixin coeur{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 200;
+    &:hover{
+            animation: coeur 400ms both;
+    }
 }
 
 @mixin desktop-only {

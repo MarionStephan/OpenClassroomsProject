@@ -217,5 +217,6 @@
 
     & .fa-heart {
         font-size: 25px;
+        @include coeur;
     }
 }

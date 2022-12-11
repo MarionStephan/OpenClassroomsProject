@@ -10,13 +10,3 @@
                 @include shadow(rgb(94, 95, 96) 0px 8px 24px);
         }
 }
-
-.fa-heart {
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-        font-weight: 200;
-        &:hover{
-                animation: coeur 400ms both;
-        }
-}
